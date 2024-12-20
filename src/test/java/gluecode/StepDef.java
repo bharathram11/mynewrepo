@@ -11,9 +11,9 @@ public class StepDef
 	String text;
 	
 	@When("I have a value like {int}")   // here we can use {int} or {}
-	public void method1(int x)
+	public void method1(int y)
 	{
-		value=x;
+		value=y;
 	}
 	
 	@Then("the number should be either even or odd")
@@ -111,13 +111,13 @@ public class StepDef
 	}
 	
 	@Given("a value like {string}")
-	public void method7(String x) 
+	public void method7(String y) 
 	{
-	    text=x;
+	    text=y;
 	}
 
 	@Then("the chars count should be {int}")
-	public void method8(Integer x) 
+	public void method8(Integer y) 
 	{
 		String[] lines=text.split("\n");
 		int count=0;
@@ -126,7 +126,7 @@ public class StepDef
 			count=count+line.trim().length();
 		}
 		System.out.println(count);
-		if(count==x)
+		if(count==y)
 		{
 			System.out.println("Chars length is Correct");
 		}
@@ -137,7 +137,7 @@ public class StepDef
 	}
 	
 	@Then("the words count should be {int}")
-	public void method9(Integer x) 
+	public void method9(Integer y) 
 	{
 		String[] lines=text.split("\n");
 		int count=0;
@@ -146,7 +146,7 @@ public class StepDef
 			count=count+line.trim().split(" ").length;
 		}
 		System.out.println(count);
-		if(count==x)
+		if(count==y)
 		{
 			System.out.println("Words length is Correct");
 		}
@@ -157,12 +157,12 @@ public class StepDef
 	}
 	
 	@Then("the lines count should be {int}")
-	public void method10(Integer x) 
+	public void method10(Integer y) 
 	{
 		int count=0;
 		count=text.split("\n").length;
 		System.out.println(count);
-		if(count==x)
+		if(count==y)
 		{
 			System.out.println("Lines length is Correct");
 		}
