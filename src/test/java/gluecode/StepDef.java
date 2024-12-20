@@ -121,7 +121,7 @@ public class StepDef
 		int count=0;
 		for(String line:lines)
 		{
-			count=count+line.trim().length();
+			//count=count+line.trim().length();
 		}
 		System.out.println(count);
 		if(count==y)
