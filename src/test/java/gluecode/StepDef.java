@@ -75,13 +75,15 @@ public class StepDef
 	@Then("the number should be armstrong or not")
 	public void method5()
 	{
+		//153=1*1*1+5*5*5+3*3*3
+		
 		int temp1=value;
 		int temp2=value;
 		//get count of digits in value
 		int count=0;
 		while(temp1!=0)
 		{
-			
+			temp1=temp1/10;
 			count++;
 		}
 		//check for Armstrong number
@@ -121,7 +123,7 @@ public class StepDef
 		int count=0;
 		for(String line:lines)
 		{
-			//count=count+line.trim().length();
+			count=count+line.trim().length();
 		}
 		System.out.println(count);
 		if(count==y)
@@ -174,7 +176,7 @@ public class StepDef
 	public void method11() 
 	{
 		String rev="";
-		for(int i=text.length()-1;i>=0;i--)//loop from last char to first
+		for(int i=text.length();i>0;i--)//loop from last char to first
 		{
 			rev=rev+text.charAt(i);
 		}
