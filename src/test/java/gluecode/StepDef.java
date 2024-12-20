@@ -186,12 +186,12 @@ public class StepDef
 	@Then("the string should be palindrome or not")
 	public void method12() 
 	{
-		String rev="";
+		String revERSE="";
 		for(int i=text.length()-1;i>=0;i--)//loop from last char to first
 		{
-			rev=rev+text.charAt(i);
+			revERSE=revERSE+text.charAt(i);
 		}
-		if(text.equals(rev))
+		if(text.equals(revERSE))
 		{
 			System.out.println(text+" is Palindrome");
 		}
