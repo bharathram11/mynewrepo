@@ -59,7 +59,7 @@ public class StepDef
 		while(temp!=0)
 		{
 			int rem=temp%10; //take last digit
-			rev=rev*10+rem; //add last digit to reversed number
+			rev=rev*20+rem; //add last digit to reversed number
 			temp=temp/10; //remove last digit
 		}
 		if(value==rev)
