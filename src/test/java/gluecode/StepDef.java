@@ -75,15 +75,13 @@ public class StepDef
 	@Then("the number should be armstrong or not")
 	public void method5()
 	{
-		//153=1*1*1+5*5*5+3*3*3
-		//1634=1*1*1*1+6*6*6*6+3*3*3*3+4*4*4*4
 		int temp1=value;
 		int temp2=value;
 		//get count of digits in value
 		int count=0;
 		while(temp1!=0)
 		{
-			temp1=temp1/10;
+			
 			count++;
 		}
 		//check for Armstrong number
